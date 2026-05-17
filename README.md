@@ -179,7 +179,3 @@ npm run dev
 | GET | `/api/tags` | No | All tags with counts |
 
 ---
-
-## 📄 License
-
-MIT © [Your Name](https://github.com/your-username)
