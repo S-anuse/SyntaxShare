@@ -11,13 +11,7 @@
 
 ---
 
-## 📸 Screenshots
-
-> *(Add screenshots here after running the app)*
-
----
-
-## ✨ Features
+##  Features
 
 - **Public Feed** — Browse and read posts without signing in. Filter by tags or search keywords.
 - **Authentication** — JWT-based register/login/logout with access + refresh token rotation.
@@ -32,7 +26,7 @@
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -49,7 +43,7 @@
 
 ---
 
-## 🗂 Project Structure
+##  Project Structure
 
 ```
 Blogg/
@@ -71,87 +65,7 @@ Blogg/
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js ≥ 18
-- A [MongoDB Atlas](https://www.mongodb.com/atlas) cluster (free tier is fine)
-
-### 1. Clone the repo
-```bash
-git clone https://github.com/your-username/syntaxshare.git
-cd syntaxshare
-```
-
-### 2. Configure the backend
-```bash
-cd server
-cp .env .env.local   # or edit .env directly
-```
-
-Edit `server/.env`:
-```env
-PORT=5000
-MONGO_URI=mongodb+srv://<user>:<pass>@cluster0.xxxxx.mongodb.net/syntaxshare
-JWT_ACCESS_SECRET=<generate a strong random string>
-JWT_REFRESH_SECRET=<generate a different strong random string>
-JWT_ACCESS_EXPIRES_IN=15m
-JWT_REFRESH_EXPIRES_IN=7d
-CLIENT_URL=http://localhost:5173
-NODE_ENV=development
-```
-
-Install and run:
-```bash
-npm install
-npm run dev
-# → Server on http://localhost:5000
-```
-
-### 3. Configure the frontend
-```bash
-cd ../client
-# Edit .env if needed:
-echo "VITE_API_URL=/api" > .env
-```
-
-Install and run:
-```bash
-npm install
-npm run dev
-# → App on http://localhost:5173
-```
-
----
-
-## 🌐 MongoDB Atlas Setup
-
-1. Create a free cluster at [cloud.mongodb.com](https://cloud.mongodb.com)
-2. Add a database user under **Security → Database Access**
-3. Whitelist your IP (or `0.0.0.0/0` for development) under **Network Access**
-4. Click **Connect → Drivers** and copy your connection string into `MONGO_URI`
-
----
-
-## ☁️ Deployment
-
-### Backend → Render
-1. Push `server/` to GitHub (or the monorepo root)
-2. Create a **Web Service** on [render.com](https://render.com)
-3. Set **Root Directory** to `server`
-4. Build command: `npm install`  |  Start command: `npm start`
-5. Add all environment variables from `server/.env` in the Render dashboard
-
-### Frontend → Vercel
-1. Import the repo on [vercel.com](https://vercel.com)
-2. Set **Root Directory** to `client`
-3. Framework preset: **Vite**
-4. Add environment variable: `VITE_API_URL=https://your-render-service.onrender.com/api`
-5. Deploy!
-
----
-
-## 📡 API Reference
+##  API Reference
 
 | Method | Endpoint | Auth | Description |
 |---|---|---|---|
